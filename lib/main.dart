@@ -1,4 +1,5 @@
-import 'package:chart/view/home_screen.dart';
+import 'package:chart/route/app_router.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,10 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ProviderScope(
-      child: MaterialApp(
+    return ProviderScope(
+      child: MaterialApp.router(
+        routerConfig: router,
         debugShowCheckedModeBanner: false,
-        home: ChartScreen(),
       ),
     );
   }

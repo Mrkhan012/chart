@@ -45,6 +45,7 @@ class ChartScreen extends ConsumerWidget {
               radius: 50,
             );
           }).toList();
+          const Divider();
 
           // Prepare data for BarChart
           final barGroups = records.asMap().entries.map((entry) {
